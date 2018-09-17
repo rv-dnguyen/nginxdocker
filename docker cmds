@@ -6,9 +6,9 @@ docker rm $(docker ps -aq);
 docker run -d \
   -it \
   --name devtest \
-  -v ~/Projects/Docker/config/nginx.conf:/etc/nginx/nginx.conf:ro\
-  -v ~/Projects/Docker/html:/usr/share/nginx/html\
-  -v ~/Projects/Docker/config/.htpasswd:/etc/nginx/conf.d/.htpasswd:ro\
+  -v ~/Projects/webservertests/nginx/config/nginx.conf:/etc/nginx/nginx.conf:ro\
+  -v ~/Projects/webservertests/nginx/html:/usr/share/nginx/html\
+  -v ~/Projects/webservertests/nginx/config/.htpasswd:/etc/nginx/conf.d/.htpasswd:ro\
   -p 5000:80 \
   nginx:latest
 
